@@ -30,11 +30,11 @@ O instala tu mismo la gema:
 
 ## Uso
 
-1. Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de forma opcional, un hash.
+Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de forma opcional, un hash.
 
 	z = SparseMatrix.new 1000 => { 100 => 1, 500 => 200}, 20000 => { 1000 => 3, 9000 => 200}
 
-2. Para comprobar su funcionamiento se podría hacer lo siguiente:
+Para comprobar su funcionamiento se podría hacer lo siguiente:
 
 	puts "z[1000][500] = #{z[1000][500]}"
 	puts "z.col(500) = #{z.col(500)}"
