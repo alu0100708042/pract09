@@ -1,9 +1,16 @@
 # Pract09
 
-TODO: Gema en la que se implementa la clase SparseMatrix que alude a el formato de matriz con más de un
-60% de ceros. En ella se tienen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
-Esos métodos son +(other),-(other),*(other), ==(other), to_s, initialize(h={}). La clase hereda de la clase Matrix, 
-en la clase SparseMatrixse sobrecargan los métodos de la clase matrix para hacer operaciones con hashes.
+TODO: Gema que implementa la clase SparseMatrix que alude a el formato de matriz con más de un 60% de ceros. 
+En ella se describen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
+Esos métodos son +(other),-(other),*(other), ==(other), to_s, initialize(h={}). 
+La clase SparseMatrix hereda de la clase Matrix, en la cual ya vienen descritas las operaciones entre matrices. 
+En la clase SparseMatrix se sobrecargan los métodos de la clase Matrix para hacer operaciones con hashes que van
+a representar a vectores y martrices dispersas.
+
+La jerarquía de clases será la que sigue:
+Matrix clase base.
+SparseMatrix, clase que hereda de Matrix.
+SparseVector, clase que es usada por SparseMatrix para crear hashes.
 
 
 ## Installation
