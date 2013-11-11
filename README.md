@@ -30,7 +30,7 @@ O instala tu mismo la gema:
 
 ## Uso
 
-TODO: Para instanciar la clase llamaremos a su constructor al cual podemos pasarle de forma opcional un hash.
+Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de forma opcional, un hash.
 
 	z = SparseMatrix.new 1000 => { 100 => 1, 500 => 200}, 20000 => { 1000 => 3, 9000 => 200}
 
@@ -39,8 +39,9 @@ Para comprobar su funcionamiento se podría hacer lo siguiente:
 	puts "z[1000][500] = #{z[1000][500]}"
 	puts "z.col(500) = #{z.col(500)}"
 
-La primera sentencia devolverá el valor  que tendría asociado  en una matriz en la fila 1000 columna 500.
-La segunda columna devuelve todas las filas que tendría la columna 500 en una matriz.
+	La primera sentencia devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
+
+	La segunda sentencia devolverá todos los valores que tendría la columna 500 en una matriz.
 
 ## Contribucciones
 
