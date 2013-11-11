@@ -30,25 +30,36 @@ O instala tu mismo la gema:
 
 ## Uso
 
-Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de forma opcional, un hash.
+1. Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de forma opcional, un hash.
 
 	z = SparseMatrix.new 1000 => { 100 => 1, 500 => 200}, 20000 => { 1000 => 3, 9000 => 200}
 
-Para comprobar su funcionamiento se podría hacer lo siguiente:
+2. Para comprobar su funcionamiento se podría hacer lo siguiente:
 
 	puts "z[1000][500] = #{z[1000][500]}"
 	puts "z.col(500) = #{z.col(500)}"
 
-	La primera sentencia devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
-
-	La segunda sentencia devolverá todos los valores que tendría la columna 500 en una matriz.
+La primera sentencia devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
+La segunda sentencia devolverá todos los valores que tendría la columna 500 en una matriz.
 
 ## Contribucciones
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+
+2. Crear una rama 
+
+	$ git checkout -b miRama
+	
+3. Hacer un commit con los cambios realizados 
+
+	$ git commit -a -m 'Mensaje descriptivo'
+
+4. Empujar los cambios al repositorio
+
+	$ git push -u origin miRama
+	
+5. Actualizar nuestro repositorio local
+
+	$ git pull origin miRama
 
 
