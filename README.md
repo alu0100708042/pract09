@@ -44,21 +44,21 @@ La segunda sentencia devolverá todos los valores que tendría la columna 500 en
 
 ## Contribucciones
 
-1. Fork it
+1.Fork it
 
-2. Crear una rama 
+2.Crear una rama 
 
 	$ git checkout -b miRama
 	
-3. Hacer un commit con los cambios realizados 
+3.Hacer un commit con los cambios realizados 
 
 	$ git commit -a -m 'Mensaje descriptivo'
 
-4. Empujar los cambios al repositorio
+4.Empujar los cambios al repositorio
 
 	$ git push -u origin miRama
 	
-5. Actualizar nuestro repositorio local
+5.Actualizar nuestro repositorio local
 
 	$ git pull origin miRama
 
