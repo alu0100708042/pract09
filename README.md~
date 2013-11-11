@@ -8,15 +8,15 @@ en la clase SparseMatrixse sobrecargan los métodos de la clase matrix para hace
 
 ## Installation
 
-Añadir esta línea a el Gemfile de la aplicación:
+Add this line to your application's Gemfile:
 
     gem 'pract09'
 
-Y entonces ejecuta:
+And then execute:
 
     $ bundle
 
-O instala tu mismo la gema:
+Or install it yourself as:
 
     $ gem install pract09
 
