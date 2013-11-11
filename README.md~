@@ -1,6 +1,7 @@
 # Pract09
 
-TODO: Gema que implementa la clase SparseMatrix que alude a el formato de matriz con más de un 60% de ceros. 
+###Descripción
+Gema que implementa la clase SparseMatrix que alude a el formato de matriz con más de un 60% de ceros. 
 En ella se describen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
 Esos métodos son +(other),-(other),*(other), ==(other), to_s, initialize(h={}). 
 La clase SparseMatrix hereda de la clase Matrix, en la cual ya vienen descritas las operaciones entre matrices. 
