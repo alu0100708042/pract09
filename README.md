@@ -1,9 +1,10 @@
 # Pract09
 
 ## Descripción
-Gema que implementa la clase SparseMatrix que alude a el formato de matriz con más de un 60% de ceros. 
+Gema que implementa la clase SparseMatrix que contempla el formato de matriz con más de un 60% de ceros. 
 En ella se describen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
-Esos métodos son +(other),-(other),*(other), ==(other), to_s, initialize(h={}). 
+Esos métodos son +(other), -(other), *(other), ==(other), to_s, initialize(h={}). 
+
 La clase SparseMatrix hereda de la clase Matrix, en la cual ya vienen descritas las operaciones entre matrices. 
 En la clase SparseMatrix se sobrecargan los métodos de la clase Matrix para hacer operaciones con hashes que van
 a representar a vectores y martrices dispersas.
@@ -37,10 +38,10 @@ Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de
 Para comprobar su funcionamiento se podría hacer lo siguiente:
 
 	puts "z[1000][500] = #{z[1000][500]}"
-	puts "z.col(500) = #{z.col(500)}"
+Devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
 
-La primera sentencia devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
-La segunda sentencia devolverá todos los valores que tendría la columna 500 en una matriz.
+	puts "z.col(500) = #{z.col(500)}"
+Devolverá todos los valores que tendría la columna 500 en una matriz.
 
 ## Contribucciones
 
