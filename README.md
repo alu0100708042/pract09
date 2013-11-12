@@ -36,10 +36,13 @@ Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de
 	z = SparseMatrix.new 1000 => { 100 => 1, 500 => 200}, 20000 => { 1000 => 3, 9000 => 200}
 
 Para comprobar su funcionamiento se podría hacer lo siguiente:
+
 Devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
+	
 	puts "z[1000][500] = #{z[1000][500]}"
 
-O esto otro que devolverá todos los valores que tendría la columna 500 en una matriz.
+Devolverá todos los valores que tendría la columna 500 en una matriz.
+	
 	puts "z.col(500) = #{z.col(500)}"
 
 ## Contribucciones
