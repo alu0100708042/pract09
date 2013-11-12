@@ -1,4 +1,4 @@
-# Pract09
+# Práctica 9 - Matrices dispersas
 
 ## Descripción
 Gema que implementa la clase SparseMatrix que contempla el formato de matriz con más de un 60% de ceros. 
@@ -36,12 +36,11 @@ Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de
 	z = SparseMatrix.new 1000 => { 100 => 1, 500 => 200}, 20000 => { 1000 => 3, 9000 => 200}
 
 Para comprobar su funcionamiento se podría hacer lo siguiente:
-
-	puts "z[1000][500] = #{z[1000][500]}"
 Devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
+	puts "z[1000][500] = #{z[1000][500]}"
 
+O esto otro que devolverá todos los valores que tendría la columna 500 en una matriz.
 	puts "z.col(500) = #{z.col(500)}"
-Devolverá todos los valores que tendría la columna 500 en una matriz.
 
 ## Contribucciones
 
