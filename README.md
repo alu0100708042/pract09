@@ -37,11 +37,11 @@ Para instanciar la clase llamaremos a su constructor al cual podemos pasarle, de
 
 Para comprobar su funcionamiento se podría hacer lo siguiente:
 
-Devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
+1.Devolverá el valor que tendría asociado en una matriz la fila 1000 y columna 500.
 	
 	puts "z[1000][500] = #{z[1000][500]}"
 
-Devolverá todos los valores que tendría la columna 500 en una matriz.
+2.Devolverá todos los valores que tendría la columna 500 en una matriz.
 	
 	puts "z.col(500) = #{z.col(500)}"
 
