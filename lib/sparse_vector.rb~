@@ -3,7 +3,6 @@
 # Clase para la representacion de vectores dispersos.
 class SparseVector 
   attr_reader :vector
-  attr_accessor :vector
 
   def initialize(h = {})
     @vector = Hash.new(0)

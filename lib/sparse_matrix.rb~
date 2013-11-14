@@ -44,7 +44,7 @@ class SparseMatrix < Matriz
 				sum = {}
 				sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
 				
-				sumita[r] = {j=>sum[j]}
+				sumita[j] = sum[j]
 				puts "#{r} => #{sumita[r]}"
 			end
 			
