@@ -1,8 +1,8 @@
-require './matriz.rb'
+require './matrix.rb'
 require './sparse_vector.rb'
 
 # Clase para la representacion de matrices dispersas.
-class SparseMatrix < Matriz
+class SparseMatrix < Matrix
 
   attr_reader :m_Matrix
 
@@ -29,8 +29,6 @@ class SparseMatrix < Matriz
     SparseVector.new c
   end
   
-
-
   def +(matrizb)
 	
 	sumita={}
@@ -38,14 +36,14 @@ class SparseMatrix < Matriz
 	#a.m_Matrix[1000].vector.keys[0]
 	
 	for r in @m_Matrix.keys do 
-		
+		sum = {}
 		if matrizb.m_Matrix.keys.include? r
 			for j in @m_Matrix[r].vector.keys do 
-				sum = {}
+				
 				sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
 				
 				sumita[r] = {j=>sum[j]}
-				puts "#{r} => #{sumita[r]}"
+				#puts "#{r} => #{sumita[r]}"
 			end
 			
 		else

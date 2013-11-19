@@ -1,40 +1,39 @@
-#fichero de definición de la clase matriz
-require 'racional.rb'
- class Matriz
+#fichero de definición de la clase matrix
+require './matrix.rb'
+ 
+class DenseMatrix < Matrix
 	
-	#inicializar matriz
-	def initialize(matriz)
+	#inicializar matrix
+	def initialize(newmatrix)
+		@matrix = newmatrix
+		 
 		
-		@matriz = matriz
-    		@row = matriz[0].size
-    		@col = matriz[0].size
+		super(newmatrix[0].size, newmatrix.size)
 	end
+	
 	# lee matriz de un fichero que se le pasa la matriz con formato básico	
-	def Matriz.read_File(file)
+	def DenseMatrix.read_File(file)
 		contenido = File.open(file).read
 		a, b = contenido.split(/\n\n+/)
-		a = Matriz.to_m(a)
-		b = Matriz.to_m(b)
+		a = Matrix.to_m(a)
+		b = Matrix.to_m(b)
 		[a, b]
 	end
 	#la transforma a un array de arrays
-	def Matriz.to_m(a)
+	def DenseMatrix.to_m(a)
 	  	a = a.split(/\n/)
 	  	a = a.map { |r| r.split(/\s+/) }
 	  	a = mapmap(a) { |x| x.to_f } 
 	end	
 	
-	def Matriz.mapmap(a)
+	def DenseMatrix.mapmap(a)
   		a.map { |r| r.map { |e| yield e }}
 	end
 
-
-
-
-
 	# asignación de get y set
 
-	attr_reader :matriz, :row, :col
+	attr_reader :matrix
+	#, :row, :col
 	#metodo para pasara a string las matrices
 		
 	def to_s
@@ -46,7 +45,7 @@ require 'racional.rb'
 				if y !=0 then
 					str << ", "
 				end
-				str << "#{matriz[x][y]}"
+				str << "#{matrix[x][y]}"
 				y= y + 1			
 			end
     			x  =  x + 1
@@ -63,68 +62,66 @@ require 'racional.rb'
 	end
 	# definicion del metodo sumar
 
-	def +(matrizb)
+	def +(matrixb)
 		sum = []
 		x,y =0,0
 		while x < row
 			while y < col
 				if y == 0
-					sum << [matriz[x][y] + matrizb.matriz[x][y]]
+					sum << [matrix[x][y] + matrixb.matrix[x][y]]
 				else
-					sum[x] << matriz[x][y] + matrizb.matriz[x][y]
+					sum[x] << matrix[x][y] + matrixb.matrix[x][y]
 				end
 				y= y+1			
 			end
 			x=x+1
 			y=0
 		end
-		Matriz.new (sum)
+		DenseMatrix.new (sum)
 
 	end
+	
 	#definicion del metodo multiplicar
-	def *(matrizc)
+	def *(matrixc)
 
-    		matRes = Array.new(matriz.size - 1,0)
+    		matRes = Array.new(matrix.size - 1,0)
 
-		for fil in 0...matriz[0].size
+		for fil in 0...matrix[0].size
 
-			matRes[fil] = Array.new(matrizc.matriz.size,0)
+			matRes[fil] = Array.new(matrixc.matrix.size,0)
 
-			for col in 0...matrizc.matriz.size
+			for col in 0...matrixc.matrix.size
 
-				for pos in 0...matriz.size
+				for pos in 0...matrix.size
 
-					prod = matriz[fil][pos] * matrizc.matriz[pos][col]
+					prod = matrix[fil][pos] * matrixc.matrix[pos][col]
 					matRes[fil][col] = matRes[fil][col] + prod
 
 				end
-
 			end
 
     		end
 
-    		Matriz.new(matRes)
-
+    		DenseMatrix.new(matRes)
   	end
+	
 	#definicion del método ==
-	def ==(matrizd)
+	def ==(matrixd)
 		x,y = 0,0
-		flag=true
+		flag = true
 		while x < row
 			while y < col
-				if self.matriz[x][y] == matrizd.matriz[x][y] then 
-					flag=true
+				if self.matrix[x][y] == matrixd.matrix[x][y] then 
+					flag = true
 				else 
 					return false
 				end
-				y= y + 1			
+				y = y + 1			
 			end
     			x  =  x + 1
     			y = 0
-		
 		end
-	return flag
+		return flag
 	end
-
 
 end

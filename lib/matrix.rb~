@@ -1,2 +1,14 @@
-class Matrix
+
+#fichero de definición de la clase matriz
+ class Matrix
+	
+	#inicializar matriz
+	def initialize(row, col)
+		@row = 0
+		@col = 0
+	end
+	
+	attr_accessor :row, :col
+	
+
 end
