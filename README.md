@@ -5,12 +5,12 @@ Gema que implementa la clase SparseMatrix que contempla el formato de matriz con
 En ella se describen métodos para la realización de operaciones aritméticas, y métodos de comparación. 
 Esos métodos son +(other), -(other), *(other), ==(other), to_s, initialize(h={}). 
 
-La clase SparseMatrix hereda de la clase Matrix, en la cual ya vienen descritas las operaciones entre matrices. 
-En la clase SparseMatrix se sobrecargan los métodos de la clase Matrix para hacer operaciones con hashes que van
-a representar a vectores y martrices dispersas.
+La clase SparseMatrix hereda de la clase Matrix, al igual que lo hace DenseMatriz en la cual se implementan las operaciones entre matrices. Esta clase está pensada para su uso con matrices densas.
+En la clase SparseMatrix tambien se implementan los metodos para hacer operaciones con hashes que van a representar a vectores y martrices dispersas.
 
 La jerarquía de clases será la que sigue:
 Matrix clase base.
+DenseMatrix, clase que hereda de Matrix.
 SparseMatrix, clase que hereda de Matrix.
 SparseVector, clase que es usada por SparseMatrix para crear hashes.
 
@@ -47,7 +47,7 @@ Para comprobar su funcionamiento se podría hacer lo siguiente:
 
 ## Contribucciones
 
-1.Fork it
+1.Colaboraciones.
 
 2.Crear una rama 
 

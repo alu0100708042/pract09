@@ -1,8 +1,8 @@
-require './matriz.rb'
+require './matrix.rb'
 require './sparse_vector.rb'
 
 # Clase para la representacion de matrices dispersas.
-class SparseMatrix < Matriz
+class SparseMatrix < Matrix
 
   attr_reader :m_Matrix
 
@@ -29,8 +29,6 @@ class SparseMatrix < Matriz
     SparseVector.new c
   end
   
-
-
   def +(matrizb)
 	
 	sumita={}
