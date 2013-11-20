@@ -64,7 +64,7 @@ class SparseMatrix < Matrix
    # Se define un metodo para hallar el máximo que retornará un número
 
    def max(other)
-	max = 0
+	max = -1000000
 	for r in @m_Matrix.keys do
 		for j in @m_Matrix[r].vector.keys do 
 			max = @m_Matrix[r].vector[j] if (max < @m_Matrix[r].vector[j] == true)		
