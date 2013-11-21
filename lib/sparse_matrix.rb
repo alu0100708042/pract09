@@ -120,5 +120,7 @@ class SparseMatrix < Matrix
 		end	
 		str << "]"	
 	end
-	
+    def coerce(other)
+	return  [self,other]
+    end 	
 end

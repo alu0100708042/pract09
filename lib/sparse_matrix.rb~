@@ -113,12 +113,14 @@ class SparseMatrix < Matrix
 			
 			for j in @m_Matrix[r].vector.keys do
 				
-			str <<	"[#{r}] [#{@m_Matrix[r].vector.to_s}] %W\n"	
+			str <<	"[#{r}] [#{@m_Matrix[r].vector.to_s}]"	
 			  #puts "[#{r}] [#{j}]"	
 			end
     	
 		end	
 		str << "]"	
 	end
-	
+    def coerced(other)
+	return  [self,other]
+    end 	
 end
