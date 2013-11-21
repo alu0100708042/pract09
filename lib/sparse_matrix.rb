@@ -11,7 +11,6 @@ class SparseMatrix < Matrix
     @m_Matrix = Hash.new({})
      row, col = 0, 0
      arrayCol=[]
-     col = 0
      j = 0
     for k in h.keys do
       row = k  if (row < k.to_i == true)   
