@@ -6,8 +6,6 @@ class DenseMatrix < Matrix
 	#inicializar matrix
 	def initialize(newmatrix)
 		@matrix = newmatrix
-		 
-		
 		super(newmatrix[0].size, newmatrix.size)
 	end
 	

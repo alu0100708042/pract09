@@ -6,8 +6,8 @@ require 'pract09/version'
 Gem::Specification.new do |spec|
   spec.name          = "pract09"
   spec.version       = Pract09::VERSION
-  spec.authors       = ["Ricardo Oliva "]
-  spec.email         = ["alu0100708042@ull.edu.es"]
+  spec.authors       = ["Ricardo Oliva, Oliver Matrinez Novo"]
+  spec.email         = ["alu0100708042@ull.edu.es, alu0100704129@ull.edu.es"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
