@@ -68,7 +68,6 @@ class SparseMatrix < Matrix
 	
 	
 	end
-
    SparseMatrix.new(sumita)
   end
   
@@ -108,4 +107,18 @@ class SparseMatrix < Matrix
 	end
 	min
    end
+   def to_s
+	 str = "["	
+		for r in @m_Matrix.keys do
+			
+			for j in @m_Matrix[r].vector.keys do
+				
+			str <<	"[#{r}] [#{@m_Matrix[r].vector.to_s}]"	
+			  #puts "[#{r}] [#{j}]"	
+			end
+    	
+		end	
+		str << "]"	
+	end
+	
 end
