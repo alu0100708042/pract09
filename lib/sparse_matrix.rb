@@ -10,8 +10,9 @@ class SparseMatrix < Matrix
   def initialize(h = {})
     @m_Matrix = Hash.new({})
      row, col = 0, 0
-     j= 0
      arrayCol=[]
+     col = 0
+     j = 0
     for k in h.keys do
       row = k  if (row < k.to_i == true)   
       if h[k].is_a? SparseVector
@@ -19,14 +20,15 @@ class SparseMatrix < Matrix
       else 
         @m_Matrix[k] = SparseVector.new(h[k])
       end
-	arrayCol << h[k].keys
-        while j < arrayCol.size
-		arrayCol[j].sort!
 
-		col = arrayCol[j].last if (col < arrayCol[j].last == true)
-		j += 1
+    end
+
+    for r in @m_Matrix.keys do
+	j= 0
+	while j <  @m_Matrix[r].vector.keys.size do 
+	     col= @m_Matrix[r].vector.keys[j] if (col < @m_Matrix[r].vector.keys[j].to_i == true)
+	     j += 1		
 	end
-
     end
     super(row,col)
   end
