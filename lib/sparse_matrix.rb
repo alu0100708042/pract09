@@ -1,6 +1,6 @@
-require './matrix.rb'
-require './sparse_vector.rb'
-require './dense_matrix.rb'
+require 'matrix'
+require 'sparse_vector'
+require 'dense_matrix'
 
 # Clase para la representacion de matrices dispersas.
 class SparseMatrix < Matrix
@@ -37,7 +37,7 @@ class SparseMatrix < Matrix
 	end
 
 	# Metodo que retorna un SparseVector con los valores de una columna.
-	def col(j)
+	def cols(j)
 		c = {}
 		for r in @m_Matrix.keys do   
 			c[r] = @m_Matrix[r].vector[j] if @m_Matrix[r].vector.keys.include? j
@@ -94,7 +94,30 @@ class SparseMatrix < Matrix
 		end
 		max
 	end
+	
+	def *(matrixc)
 
+    	if (matrixc.row == self.row && matrixc.col == self.col) then
+
+	arr=[]
+	multiplicar={}	
+		for r in @m_Matrix.keys do
+			mult = {}			
+			for j in @m_Matrix[r].vector.keys do 
+			
+					prod = @m_Matrix[r][j].to_i * matrixc.m_Matrix[r][j].to_i
+					mult[j] = mult[j].to_i + prod
+					arr << r
+					arr <<  multiplicar[r] =  {j=>mult[j]}		
+				#puts "#{@m_Matrix[r][pos]} #{matrixc.m_Matrix[pos][j]} #{matRes[r][j]} #{r} #{j}"
+				#end
+			end
+		end
+	else 
+		puts "La matriz no es cuadrada no se puede multiplicar" 
+    	end
+    arr
+    end
     # Se define un metodo para hallar el máximo que retornará un número
 	def min(other)
 		min = 1000000

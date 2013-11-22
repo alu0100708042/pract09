@@ -1,5 +1,5 @@
 #fichero de definición de la clase matrix
-require './matrix.rb'
+require 'matrix.rb'
  
 class DenseMatrix < Matrix
 	

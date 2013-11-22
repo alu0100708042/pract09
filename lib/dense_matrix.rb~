@@ -17,6 +17,7 @@ class DenseMatrix < Matrix
 		b = Matrix.to_m(b)
 		[a, b]
 	end
+	
 	#la transforma a un array de arrays
 	def DenseMatrix.to_m(a)
 	  	a = a.split(/\n/)
@@ -29,11 +30,9 @@ class DenseMatrix < Matrix
 	end
 
 	# asignación de get y set
-
 	attr_reader :matrix
-	#, :row, :col
-	#metodo para pasara a string las matrices
-		
+	
+	#metodo para pasar a string las matrices
 	def to_s
 		x,y = 0,0
 		str = "["
@@ -58,8 +57,8 @@ class DenseMatrix < Matrix
 		str << "]"
 		str
 	end
-	# definicion del metodo sumar
 
+	# definicion del metodo sumar
 	def +(matrixb)
 		sum = []
 		x,y =0,0
@@ -76,13 +75,12 @@ class DenseMatrix < Matrix
 			y=0
 		end
 		DenseMatrix.new (sum)
-
 	end
 	
 	#definicion del metodo multiplicar
 	def *(matrixc)
 
-    		matRes = Array.new(matrix.size - 1,0)
+    	matRes = Array.new(matrix.size - 1,0)
 
 		for fil in 0...matrix[0].size
 
@@ -98,9 +96,9 @@ class DenseMatrix < Matrix
 				end
 			end
 
-    		end
+    	end
 
-    		DenseMatrix.new(matRes)
+    	DenseMatrix.new(matRes)
   	end
 	
 	#definicion del método ==
