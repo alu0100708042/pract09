@@ -11,7 +11,6 @@ class SparseMatrix < Matrix
     @m_Matrix = Hash.new({})
      row, col = 0, 0
      arrayCol=[]
-     col = 0
      j = 0
     for k in h.keys do
       row = k  if (row < k.to_i == true)   
@@ -24,10 +23,9 @@ class SparseMatrix < Matrix
     end
 
     for r in @m_Matrix.keys do
-    puts "#{r}"
+	j= 0
 	while j <  @m_Matrix[r].vector.keys.size do 
 	     col= @m_Matrix[r].vector.keys[j] if (col < @m_Matrix[r].vector.keys[j].to_i == true)
-	     puts "#{@m_Matrix[r].vector.keys}"	
 	     j += 1		
 	end
     end
@@ -70,7 +68,6 @@ class SparseMatrix < Matrix
 	
 	
 	end
-
    SparseMatrix.new(sumita)
   end
   
@@ -110,4 +107,20 @@ class SparseMatrix < Matrix
 	end
 	min
    end
+   def to_s
+	 str = "["	
+		for r in @m_Matrix.keys do
+			
+			for j in @m_Matrix[r].vector.keys do
+				
+			str <<	"[#{r}] [#{@m_Matrix[r].vector.to_s}]"	
+			  #puts "[#{r}] [#{j}]"	
+			end
+    	
+		end	
+		str << "]"	
+	end
+    def coerced(other)
+	return  [self,other]
+    end 	
 end
