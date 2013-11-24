@@ -1,6 +1,6 @@
-require 'matrix'
-require 'sparse_vector'
-require 'dense_matrix'
+require './matrix.rb'
+require './sparse_vector.rb'
+require './dense_matrix.rb'
 
 # Clase para la representacion de matrices dispersas.
 class SparseMatrix < Matrix
@@ -47,19 +47,27 @@ class SparseMatrix < Matrix
 
 	# Metodo para la operacion aritmetica de la suma.
 	def +(matrizb)
-		sumita={}
+		
+		#sumita={}
+		#for r in @m_Matrix.keys do 
+		#	sum = {}
+		#	if matrizb.m_Matrix.keys.include? r
+		#		for j in @m_Matrix[r].vector.keys do 
+		#			sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
+		#			sumita[r] = {j=>sum[j]}
+		#		end
+		#	else
+		#		sum[r]=@m_Matrix[r]
+		#	end
+		#end
+		#SparseMatrix.new(sumita)
+
 		for r in @m_Matrix.keys do 
-			sum = {}
-			if matrizb.m_Matrix.keys.include? r
-				for j in @m_Matrix[r].vector.keys do 
-					sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
-					sumita[r] = {j=>sum[j]}
-				end
-			else
-				sum[r]=@m_Matrix[r]
+			for j in @m_Matrix[r].vector.keys do 
+				matrizb[r][j]= @m_Matrix[r][j]+matrizb[r][j]
 			end
-		end
-		SparseMatrix.new(sumita)
+		end	
+	matrizb
 	end
 
 	# Metodo para la operacion aritmetica de la resta.

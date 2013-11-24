@@ -18,4 +18,8 @@ class SparseVector
     @vector.to_s
   end
   
+  def []=(i,j)
+  	@vector[i]=j
+  end
+  
 end

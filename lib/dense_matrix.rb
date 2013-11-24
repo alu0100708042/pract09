@@ -1,5 +1,5 @@
 #fichero de definición de la clase matrix
-require 'matrix.rb'
+require './matrix.rb'
  
 class DenseMatrix < Matrix
 	
@@ -65,16 +65,16 @@ class DenseMatrix < Matrix
 		while x < row
 			while y < col
 				if y == 0
-					sum << [matrix[x][y] + matrixb.matrix[x][y]]
+					sum << [matrix[x][y] + matrixb[x][y]]
 				else
-					sum[x] << matrix[x][y] + matrixb.matrix[x][y]
+					sum[x] << matrix[x][y] + matrixb[x][y]
 				end
 				y= y+1			
 			end
 			x=x+1
 			y=0
 		end
-		DenseMatrix.new (sum)
+		DenseMatrix.new(sum)
 	end
 	
 	#definicion del metodo multiplicar
@@ -119,5 +119,7 @@ class DenseMatrix < Matrix
 		end
 		return flag
 	end
-
+	def [](i)
+		self.matrix[i]
+	end
 end
